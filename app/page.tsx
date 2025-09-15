@@ -1,9 +1,8 @@
 'use client'
 
 import React, { useState, useCallback } from 'react';
-import { TrendingUp, TrendingDown, Check, Calendar, Zap, Trophy, Target } from 'lucide-react';
+import { TrendingUp, TrendingDown, Check, Calendar, Zap } from 'lucide-react';
 
-// Enhanced Input Component
 const EnhancedInput = ({ type, value, onChange, maxLength = 200 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -67,7 +66,6 @@ const EnhancedInput = ({ type, value, onChange, maxLength = 200 }) => {
   );
 };
 
-// Enhanced Submit Button
 const EnhancedSubmitButton = ({ onSubmit, isLoading, peakLength, pitLength }) => {
   const isFormValid = peakLength > 0 && pitLength > 0;
   const completionPercentage = ((peakLength > 0 ? 50 : 0) + (pitLength > 0 ? 50 : 0));
@@ -112,7 +110,6 @@ const EnhancedSubmitButton = ({ onSubmit, isLoading, peakLength, pitLength }) =>
   );
 };
 
-// Main App Component
 export default function PeaksAndPitsApp() {
   const [activeTab, setActiveTab] = useState('today');
   const [peak, setPeak] = useState('');
