@@ -162,7 +162,7 @@ const StreakTrackerPage = ({ onBack = () => {} }) => {
   // Calculate streak
   const calculateCurrentStreak = () => {
     let streak = 0;
-    const checkDate = new Date();
+    let checkDate = new Date();
     
     while (streak < 30) { // Check last 30 days max
       const dateStr = checkDate.toISOString().split('T')[0];
